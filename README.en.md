@@ -14,7 +14,7 @@ A custom Android TV launcher with app grid, reflection icons, and bottom navigat
 
 ## Screenshots
 
-*(Coming soon)*
+![TV Launcher Home Screen](screenshots/软件开发的图片.png)
 
 ## Tech Stack
 

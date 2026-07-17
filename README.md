@@ -14,7 +14,7 @@
 
 ## 截图
 
-*(待补充)*
+![TV Launcher 主界面](screenshots/软件开发的图片.png)
 
 ## 技术栈
 
