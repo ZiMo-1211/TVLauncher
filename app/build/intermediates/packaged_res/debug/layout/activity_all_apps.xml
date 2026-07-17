@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A2E"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="#2A2A4A">
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="←"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/bg_button" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="全部应用"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/apps_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

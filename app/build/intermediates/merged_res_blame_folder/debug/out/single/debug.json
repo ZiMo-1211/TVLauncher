@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_gradient_reflection.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\gradient_reflection.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\layout_item_all_app.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\layout\\item_all_app.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_ic_chrome.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\ic_chrome.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_ic_signal_source.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\ic_signal_source.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\layout_item_app_grid.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\layout\\item_app_grid.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\layout_item_app_small.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\layout\\item_app_small.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_ic_netflix.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\ic_netflix.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_ic_settings.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\ic_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_bg_button.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\bg_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_bg_item.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\bg_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_ic_my_apps.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\ic_my_apps.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\layout_activity_all_apps.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\layout\\activity_all_apps.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_ic_keystone.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\ic_keystone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_ic_miracast.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\ic_miracast.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_ic_google_play.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\ic_google_play.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_ic_youtube.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\ic_youtube.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-merged_res-31:\\drawable_bg_focus.xml.flat",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\drawable\\bg_focus.xml"
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-mergeDebugResources-30:\\layout\\item_app_grid.xml",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\layout\\item_app_grid.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-mergeDebugResources-30:\\layout\\item_all_app.xml",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\layout\\item_all_app.xml"
+    },
+    {
+        "merged": "com.example.tvlauncher.app-mergeDebugResources-30:/layout/activity_all_apps.xml",
+        "source": "com.example.tvlauncher.app-main-33:/layout/activity_all_apps.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-mergeDebugResources-30:\\layout\\item_app_small.xml",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\layout\\item_app_small.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-mergeDebugResources-30:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.tvlauncher.app-mergeDebugResources-30:/layout/item_all_app.xml",
+        "source": "com.example.tvlauncher.app-main-33:/layout/item_all_app.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-mergeDebugResources-30:\\layout\\activity_all_apps.xml",
+        "source": "C:\\Users\\Lzy\\.gradle\\daemon\\8.5\\com.example.tvlauncher.app-main-33:\\layout\\activity_all_apps.xml"
+    },
+    {
+        "merged": "com.example.tvlauncher.app-mergeDebugResources-30:/layout/activity_main.xml",
+        "source": "com.example.tvlauncher.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.tvlauncher.app-mergeDebugResources-30:/layout/item_app_grid.xml",
+        "source": "com.example.tvlauncher.app-main-33:/layout/item_app_grid.xml"
+    }
+]
