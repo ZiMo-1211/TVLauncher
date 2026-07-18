@@ -25,11 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView gridRecyclerView;
     private TextView tvDateTime;
-    private TextView btnKeystone;
-    private TextView btnMiracast;
-    private TextView btnSignalSource;
-    private TextView btnMyApps;
-    private TextView btnSettings;
+
+    // 👇 关键改动：将原来的 TextView 改为 View，解决 ClassCastException 崩溃
+    private View btnKeystone;
+    private View btnMiracast;
+    private View btnSignalSource;
+    private View btnMyApps;
+    private View btnSettings;
 
     private AppGridAdapter adapter;
     private List<AppInfo> appList = new ArrayList<>();
@@ -59,12 +61,10 @@ public class MainActivity extends AppCompatActivity {
         gridRecyclerView.requestFocus();
     }
 
-    /**
-     * 绑定布局文件中所有视图引用
-     */
     private void initViews() {
         gridRecyclerView = findViewById(R.id.grid_recycler_view);
         tvDateTime = findViewById(R.id.tv_datetime);
+        // 👇 findViewById 会精确找到外层线性布局，返回 View
         btnKeystone = findViewById(R.id.btn_keystone);
         btnMiracast = findViewById(R.id.btn_miracast);
         btnSignalSource = findViewById(R.id.btn_signal_source);
@@ -72,11 +72,6 @@ public class MainActivity extends AppCompatActivity {
         btnSettings = findViewById(R.id.btn_settings);
     }
 
-    /**
-     * 配置四列应用网格的 RecyclerView 及其适配器
-     *
-     * 每个条目的点击事件通过 AppInfo 中存储的包名委托给 {@link #launchApp(String)}
-     */
     private void setupRecyclerView() {
         GridLayoutManager layoutManager = new GridLayoutManager(this, 4);
         gridRecyclerView.setLayoutManager(layoutManager);
@@ -90,12 +85,6 @@ public class MainActivity extends AppCompatActivity {
         gridRecyclerView.setFocusableInTouchMode(true);
     }
 
-    /**
-     * 加载默认应用列表到网格中
-     *
-     * 通过 PackageManager 解析每个应用的图标。
-     * 若应用未安装则依次降级：启动器自身图标 → 系统默认图标。
-     */
     private void loadDefaultApps() {
         PackageManager pm = getPackageManager();
 
@@ -103,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 {"NETFLIX", "com.netflix.mediaclient"},
                 {"YouTube", "com.google.android.youtube"},
                 {"Google Play", "com.android.vending"},
-                {"Chrome", "com.android.chrome"}
+                {"chrome", "com.android.chrome"}
         };
 
         appList.clear();
@@ -134,16 +123,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.updateData(appList);
     }
 
-    /**
-     * 根据包名尝试启动应用
-     *
-     * 解析策略：
-     * 1. 通过 PackageManager 验证应用是否已安装
-     * 2. 获取标准启动 Intent（ACTION_MAIN + CATEGORY_LAUNCHER）
-     * 3. 降级方案——遍历清单中所有 Activity 并启动第一个
-     *
-     * @param packageName 目标应用的完整包名
-     */
     private void launchApp(String packageName) {
         try {
             PackageManager pm = getPackageManager();
@@ -178,24 +157,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * 在屏幕底部显示短暂停留的 Toast 消息
-     *
-     * @param msg 要显示的消息文本
-     */
     private void showMessage(String msg) {
         android.widget.Toast.makeText(this, msg, android.widget.Toast.LENGTH_SHORT).show();
     }
 
-    /**
-     * 配置底部五个导航按钮：
-     * Keystone、Miracast、Signal Source、MyApps 和 Settings
-     *
-     * 每个按钮包含：
-     * - 点击监听，绑定各自对应的操作
-     * - 焦点变化监听，提供视觉反馈（缩放 + 高亮）
-     * - 水平方向焦点遍历顺序（从左到右）
-     */
     private void setupBottomButtons() {
         btnKeystone.setOnClickListener(v -> launchApp("com.keystone.app"));
         btnMiracast.setOnClickListener(v -> launchApp("com.miracast.app"));
@@ -215,8 +180,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        TextView[] buttons = {btnKeystone, btnMiracast, btnSignalSource, btnMyApps, btnSettings};
-        for (TextView btn : buttons) {
+        View[] buttons = {btnKeystone, btnMiracast, btnSignalSource, btnMyApps, btnSettings};
+        for (View btn : buttons) {
             btn.setOnFocusChangeListener((v, hasFocus) -> {
                 if (hasFocus) {
                     v.setBackgroundResource(R.drawable.bg_focus);
@@ -246,12 +211,6 @@ public class MainActivity extends AppCompatActivity {
         gridRecyclerView.setNextFocusDownId(btnKeystone.getId());
     }
 
-    /**
-     * 更新时钟 TextView 显示当前日期和时间
-     *
-     * 格式："h:mm a 'Saturday,' MMMM d"（例如 "8:08 AM Saturday, November 11"）
-     * 首次在 onCreate 中调用，之后通过 Handler 每 10 秒循环刷新
-     */
     private void updateDateTime() {
         Date now = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("h:mm a 'Saturday,' MMMM d", Locale.US);

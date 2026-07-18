@@ -3,22 +3,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1A1A2E"
+    android:background="#1A3FF5"
     android:focusable="true"
     android:focusableInTouchMode="true">
 
-    <TextView
-        android:id="@+id/tv_datetime"
+    <!-- 右上角顶部栏：图标 + 时间 -->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
-        android:layout_marginStart="40dp"
-        android:text="8:08 AM Saturday, November 11"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-medium" />
+        android:layout_marginEnd="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
+        <!-- 图标1：网络/Wi-Fi -->
+        <ImageView
+            android:id="@+id/icon_wifi"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/presence_online"
+            android:tint="#FFFFFF" />
+
+        <!-- 图标2：投屏/Miracast -->
+        <ImageView
+            android:id="@+id/icon_miracast"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_miracast"
+            android:layout_marginStart="12dp"
+            android:tint="#FFFFFF" />
+
+        <!-- 日期时间 -->
+        <TextView
+            android:id="@+id/tv_datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="8:08 AM Saturday, November 11"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+
+    <!-- 主程序网格 -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/grid_recycler_view"
         android:layout_width="match_parent"
@@ -33,6 +63,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true" />
 
+    <!-- 底部导航栏 -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,89 +74,195 @@
         android:gravity="center"
         android:focusable="false">
 
-        <TextView
+        <!-- Keystone 整体按键 -->
+        <LinearLayout
             android:id="@+id/btn_keystone"
             android:layout_width="140dp"
-            android:layout_height="60dp"
-            android:text="@string/keystone"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
             android:gravity="center"
-            android:drawableTop="@drawable/ic_keystone"
-            android:drawablePadding="4dp"
             android:background="@drawable/bg_button"
             android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="sans-serif-medium" />
+            android:focusableInTouchMode="true">
 
-        <TextView
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_keystone"
+                android:tint="#FFFFFF"
+                android:layout_marginTop="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#1A4880">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/keystone"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Miracast 整体按键 -->
+        <LinearLayout
             android:id="@+id/btn_miracast"
             android:layout_width="140dp"
-            android:layout_height="60dp"
-            android:text="@string/miracast"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
             android:gravity="center"
-            android:drawableTop="@drawable/ic_miracast"
-            android:drawablePadding="4dp"
             android:background="@drawable/bg_button"
             android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="sans-serif-medium" />
+            android:focusableInTouchMode="true">
 
-        <TextView
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_miracast"
+                android:tint="#FFFFFF"
+                android:layout_marginTop="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#1A4880">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/miracast"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Signal Source 整体按键 -->
+        <LinearLayout
             android:id="@+id/btn_signal_source"
             android:layout_width="140dp"
-            android:layout_height="60dp"
-            android:text="@string/signal_source"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
             android:gravity="center"
-            android:drawableTop="@drawable/ic_signal_source"
-            android:drawablePadding="4dp"
             android:background="@drawable/bg_button"
             android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="sans-serif-medium" />
+            android:focusableInTouchMode="true">
 
-        <TextView
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_signal_source"
+                android:tint="#FFFFFF"
+                android:layout_marginTop="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#1A4880">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/signal_source"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- MyApps 整体按键 -->
+        <LinearLayout
             android:id="@+id/btn_my_apps"
             android:layout_width="140dp"
-            android:layout_height="60dp"
-            android:text="@string/my_apps"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
             android:gravity="center"
-            android:drawableTop="@drawable/ic_my_apps"
-            android:drawablePadding="4dp"
             android:background="@drawable/bg_button"
             android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="sans-serif-medium" />
+            android:focusableInTouchMode="true">
 
-        <TextView
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_my_apps"
+                android:tint="#FFFFFF"
+                android:layout_marginTop="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#1A4880">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/my_apps"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Settings 整体按键 -->
+        <LinearLayout
             android:id="@+id/btn_settings"
             android:layout_width="140dp"
-            android:layout_height="60dp"
-            android:text="@string/settings"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:gravity="center"
-            android:drawableTop="@drawable/ic_settings"
-            android:drawablePadding="4dp"
             android:background="@drawable/bg_button"
             android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:fontFamily="sans-serif-medium" />
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_settings"
+                android:tint="#FFFFFF"
+                android:layout_marginTop="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#1A4880">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/settings"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>
